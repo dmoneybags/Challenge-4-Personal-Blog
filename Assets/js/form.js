@@ -30,7 +30,7 @@ blogForm.addEventListener("submit", (event) => {
         console.log("Initialized Blog Posts with first item:", blogPosts);
     }
     localStorage.setItem("blog", JSON.stringify(blogPosts));
-    window.location.replace("/blog.html");
+    window.location.replace("./blog.html");
 })
 const loadDarkModeState = () => {
     const darkModeState = localStorage.getItem("darkModeState");
