@@ -32,3 +32,30 @@ blogForm.addEventListener("submit", (event) => {
     localStorage.setItem("blog", JSON.stringify(blogPosts));
     window.location.replace("/blog.html");
 })
+const loadDarkModeState = () => {
+    const darkModeState = localStorage.getItem("darkModeState");
+    console.log(darkModeState)
+    if (darkModeState === "dark"){
+        //Add the dark classes and remove the light classes
+        const body = document.getElementsByTagName("body")[0]
+        body.classList.add("rootDark");
+        blogForm.classList.remove("form-light");
+        blogForm.classList.add("form-dark");
+    } else {
+        //Add the light classes and remove the dark ones
+        const body = document.getElementsByTagName("body")[0]
+        body.classList.remove("rootDark");
+        blogForm.classList.add("form-light");
+        blogForm.classList.remove("form-dark");
+        location.reload();
+    }
+}
+const setDarkModeState = (checkboxElem) => {
+    //checked is dark mode ON
+    if (checkboxElem.checked){
+        localStorage.setItem("darkModeState", "dark");
+    } else {
+        localStorage.setItem("darkModeState", "light");
+    }
+    loadDarkModeState();
+}
