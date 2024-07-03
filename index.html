@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title>My Blog</title>
+</head>
+<body>
+    <header>
+        <section id="light-dark-mode-section">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <p>Toggle light or dark mode</p>
+        </section>
+        <h1>Worldwide blog</h1>
+    </header>
+    <main>
+        <section class="description">
+            <p>The first worldwide collection of stories</p>
+            <p>--------------------</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores at corporis! Saepe, fugiat? Nam minus fugit laudantium similique nostrum harum libero, autem perferendis! Vitae, voluptatibus ipsa. Sed, amet vel!</p>
+        </section>
+        <form id="blog-form">
+            <h2>Write your post to the world</h1>
+            <br>
+            <label for="Username">Username:</label>
+            <input id = "blog-username" type="text" name="Username">
+            <label for="Title">Title:</label>
+            <input id="blog-title" type="text" name="Title">
+            <label id="blog-post-label" for="Blog Content:">Content:</label>
+            <textarea id="blog-post-content-area" type="text" name="Blog Content">Write your blog post here.</textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+        <p>Check me out on github <a href="">here</a></p>
+    </footer>
+</body>
+<script src="Assets/js/form.js"></script>
+</html>
